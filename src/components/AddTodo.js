@@ -18,7 +18,7 @@ export class AddTodo extends Component {
             <form onSubmit={this.onSubmit} style={{ display: 'flex', padding: '5px' }}>
                 <input type="text" 
                 name="title" 
-                style={{ flex: '10' }}
+                style={ inputStyle }
                 placeholder="Add To Do..." 
                 value = {this.state.title}
                 onChange={this.onChange}
@@ -32,6 +32,11 @@ export class AddTodo extends Component {
             </form>
         )
     }
+}
+
+const inputStyle = {
+    paddingLeft: '5px',
+    flex: '10'
 }
 
 export default AddTodo
